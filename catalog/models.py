@@ -37,7 +37,7 @@ class Book(models.Model):
         unique=True,
         help_text="3 Character <a href='https://www.isbn-international.org/content/what-isbn'>ISBN number</a>",
     )
-    genre = models.ManyToManyField(Genre, help_text="select a genre for this  book")
+    genre = models.ManyToManyField(Genre, help_text="select a genre for this book")
 
     def __str__(self) -> str:
         return self.title
