@@ -56,7 +56,7 @@ class BookInstance(models.Model):
         primary_key=True, default=uuid.uuid4, help_text="Unique id for this particular book across whoel library"
     )
     book = models.ForeignKey(Book, on_delete=models.RESTRICT, null=True)
-    inprint = models.CharField(max_length=200)
+    imprint = models.CharField(max_length=200)
     due_back = models.DateField(null=True, blank=True)
 
     LOAN_STATUS = (
